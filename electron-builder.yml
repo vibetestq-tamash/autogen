@@ -1,0 +1,19 @@
+appId: com.autogen.teststudio
+productName: AutoGen Test Studio
+directories:
+  output: dist
+  buildResources: resources
+files:
+  - out/**
+  - package.json
+asarUnpack:
+  - node_modules/playwright/**
+  - node_modules/playwright-core/**
+win:
+  target: nsis
+mac:
+  target: dmg
+  category: public.app-category.developer-tools
+linux:
+  target: AppImage
+  category: Development
